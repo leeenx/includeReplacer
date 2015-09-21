@@ -1,0 +1,29 @@
+{
+	"name":"wqs页面片",
+	"version": "1.0.1",
+	"manifest_version":2,
+	"description":"wqs.jd.com页面片神器",
+	"icons":{
+		"48":"icon.png"
+	},
+	"background":{
+		"page":"background.html"
+	},
+	"browser_action":{
+		"default_title":"wqs.jd.com页面片神器",
+		"default_icon":"icon.png"
+	},
+	"content_scripts":[
+		{
+			// "js":["script/addlogout.js","script/communication.js","script/auto.js","script/kaoqin.js"],
+			"js":["script/content.js"],
+			"matches":["*://*/*","file://*"]
+		}
+	],
+	"permissions":[
+		"tabs","http://*/*"
+	]/*,
+	"web_accessible_resources":[
+		"script/rewitemessager.js","script/loginout.js"
+	]*/
+}
